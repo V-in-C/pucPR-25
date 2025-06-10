@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New game</title>
+</head>
+<body>
+  <h1>New game</h1>
+  <ul id="gameList"></ul>
+  <button id="reloadButton">Reload Game List</button>
+  <div id="gameContainer"></div>
+  <script>
+    document.getElementById('reloadButton').addEventListener('click', function() {
+      loadGames();
+    });
+
+    // Add this to run script.js from a button
+    let selectedGame = null;
+    const runScriptButton = document.createElement('button');
+    runScriptButton.textContent = 'Run script.js';
+    runScriptButton.addEventListener('click', function() {
+      if (selectedGame && typeof runPythonGame === 'function') {
+        runPythonGame(selectedGame.name);
+      } else {
+        alert('Please select a game first.');
+      }
+    });
+    document.body.insertBefore(runScriptButton, document.getElementById('gameContainer'));
+
+    function loadGames() {
+      const gameList = document.getElementById('gameList');
+      gameList.innerHTML = ''; // Clear the list
+
+      // Simulate fetching games from a server
+      const games = [
+        { name: 'Game 1', description: 'Description of Game 1' },
+        { name: 'Game 2', description: 'Description of Game 2' }
+      ];
+      games.forEach(game => {
+        const li = document.createElement('li');
+        li.style.cursor = 'pointer';
+        li.textContent = game.name;
+        li.addEventListener('click', () => {
+          showGameDetails(game);
+          selectedGame = game;
+          // Highlight selected game
+          Array.from(gameList.children).forEach(child => child.style.background = '');
+          li.style.background = '#e0e0e0';
+        });
+        gameList.appendChild(li);
+      });
+    }
+
+    function showGameDetails(game) {
+      const gameContainer = document.getElementById('gameContainer');
+      gameContainer.innerHTML = `<h2>${game.name}</h2><p>${game.description}</p>`;
+    }
+
+    // Load games on initial page load
+    // Load games on initial page load
+    loadGames();  
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
