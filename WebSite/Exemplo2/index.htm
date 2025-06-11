@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo - Ciências da Computação</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="estilo.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-700 text-white p-6 text-center">
+    <div class="absolute top-4 right-4">
+      <img src="minha-foto.jpg" alt="Foto de João Silva" class="w-100 h-80 rounded-full border-4 border-white shadow-lg">
+    </div>
+    <h1 class="text-3xl font-bold">Victor de Souza Maia</h1>
+    <p>Estudante de Ciências da Computação - PUC PR</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Sobre mim</h2>
+      <p>Sou estudante de Ciências da Computação na PUC PR, com interesse em desenvolvimento web, inteligência artificial e sistemas distribuídos.</p>
+      <p>Nascido em Curitiba no ano de 2006. Estudei na escola Marista Santa Maria desde o ensino infantil até o médio e sempre tive interesse por tecnologia e programação.</p>
+      <p>Desde 2019, comecei a desenvolver jogos e aplicativos móveis, aprimorando minhas habilidades em programação e design.</p>
+      <p>Também tenho interesse por jogos digitais e RPG.</p>
+      <p>Tenho fluência no idioma inglês, tendo sido conferido o diploma de Cambridge FCE B2 e com experiência em conversação e escrita, tendo feito intercâmbio de 1 mês na Universidade de Winchester, na Inglaterra.</p>
+      <p>Minha graduação tem previsão de conclusão em 2030.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Disciplinas cursadas no 1o semestre de 2025</h2>
+      <ul class="list-disc list-inside">
+        <li>Raciocínio Algoritico</li>
+        <li>Resolução de Problemas com Lógica Matemática</li>
+        <li>Experiência Criativa: Navegando na Computação</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Portfólio</h2>
+      <ul class="list-disc list-inside">
+        <li><a href="https://github.com/seuusuario/projeto1" class="text-blue-600 hover:underline">Projeto 1 - Jogo em Python</a></li>
+        <li><a href="https://github.com/seuusuario/projeto2" class="text-blue-600 hover:underline">Projeto 2 - Website pessoal</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Contato</h2>
+      <button onclick="abrirFormularioContato()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-transform transform hover:scale-105">Entrar em contato</button>
+      <div id="formulario-contato" class="mt-4 hidden animate-fade-in p-4 border border-gray-300 rounded shadow bg-white">
+        <p class="mb-2">Escolha a forma de contato:</p>
+        <div class="flex gap-4">
+          <button onclick="contatar('email')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-transform transform hover:scale-105">Email</button>
+          <button onclick="contatar('whatsapp')" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-transform transform hover:scale-105">WhatsApp</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-700 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 Victor de Souza. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
